@@ -24,14 +24,12 @@ public class Robot extends TimedRobot {
   //Life is beautiful when you don't have eyes...
 
   
-  private final Talon m_leftfrontMotor = new Talon(0);
-  private final Talon m_leftbackMotor = new Talon(1);
-  private final MotorControllerGroup leftControllerGroup = new MotorControllerGroup(m_leftfrontMotor, m_leftbackMotor);
-  
-  private final Talon m_rightfrontMotor = new Talon(2);
-  private final Talon m_rightbackMotor = new Talon(3);
-  private final MotorControllerGroup rightControllerGroup = new MotorControllerGroup(m_rightfrontMotor, m_rightbackMotor);
-    
+  private final TalonSRX m_leftrfrontMotor = new TalonSRX(14);
+  private final TalonSRX m_leftrbackMotor = new TalonSRX(15);
+  private final MotorControllerGroup leftControllerGroup = new MotorControllerGroup(m_leftfrontMotor14, m_leftbackMotor15)
+  private final TalonSRX m_rightfrontMotor = new TalonSRX(0);
+  private final TalonSRX m_rightbackMotor = new TalonSRX(1);
+  private final MotorControllerGroup rightControllerGroup = new MotorControllerGroup(m_rightfrontMotor0, m_leftbackMotor1)
   private final DifferentialDrive m_robotDrive = new DifferentialDrive(leftControllerGroup, rightControllerGroup);
   private final XboxController m_driverController = new XboxController(0);
 
